@@ -31,6 +31,13 @@ function App() {
         </div>
         <TermList letter={letter}/>
     </div>
+    <footer>
+      <p className='foTitle'>Integrantes:</p>
+      <p>Sergio Ricaflor CI: 30162461</p>
+      <p>Leonardo Garcia CI: 30799528</p>
+      <p>Jesus Borges CI: 30541139</p>
+      <p>Bryan Pineda CI: 30255871</p>
+    </footer>
     </>
   )
 }
