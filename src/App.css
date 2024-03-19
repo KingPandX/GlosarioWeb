@@ -1,0 +1,84 @@
+.title{
+  font-weight: bolder;
+  display: block;
+  width: fit-content;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+}
+
+.LetterContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn{
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:first-of-type{
+  border-radius: 5px 0px 0px 5px;
+}
+
+.btn:last-of-type{
+  border-radius: 0px 5px 5px 0px;
+}
+
+.btn:only-of-type{
+  border-radius: 5px;
+}
+
+.letter{
+  transition: all 0.3s;
+  text-decoration: none;
+  color: white;
+  margin-inline: 5px;
+  cursor: pointer;
+}
+
+.letter:hover{
+  text-decoration: underline;
+  color: rgb(195, 239, 255);
+}
+
+.terms{
+  background: rgb(201, 201, 201);
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: black;
+  border-radius: 3px;
+  box-shadow: 3px 10px 10px 0px rgba(0,0,0,0.45);
+}
+
+.terms > *{
+  margin-inline: 15px;
+}
+
+.terms > h1{
+  font-weight: bolder;
+  font-size: 2.2em;
+  text-decoration: underline;
+}
+
+.terms > p{
+  font-size: 1.05em;
+}
+
+.termTitle::first-letter{
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+.TermContainer{
+  height: 100%;
+  width: 70%;
+  overflow-y: auto;
+}
