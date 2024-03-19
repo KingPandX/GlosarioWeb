@@ -22,6 +22,14 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+  
   deploy:
     environment:
       name: github-pages
@@ -34,11 +42,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'pnpm'
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
       - name: Build
-        run: npm run build
+        run: pnpm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
